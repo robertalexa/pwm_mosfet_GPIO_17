@@ -40,7 +40,7 @@ def handleFan():
     fanSpeed=pDiff +iDiff
     if fanSpeed>100:
         fanSpeed=100
-    if fanSpeed<15:
+    if fanSpeed<20:
         fanSpeed=0
     if sum>100:
         sum=100
