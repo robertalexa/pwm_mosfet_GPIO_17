@@ -7,8 +7,8 @@ Type=simple
 StandardOutput=null
 StandardError=null
 User=root
-ExecStart=/usr/bin/python /home/pi/pwm_fan/pwm_mosfet_GPIO_17.py
-WorkingDirectory=/home/pi/pwm_fan
+ExecStart=/usr/bin/python3 /home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.py
+WorkingDirectory=/home/pi/pwm_mosfet_GPIO_17
 
 [Install]
 WantedBy=multi-user.target
