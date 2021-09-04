@@ -26,10 +26,10 @@ I've also added a new simple systemd service.
 Setup:
 ```
 cd /home/pi
-git clone <THIS REPO> pwm_fan
-cd pwm_fan
-chmod 755 /home/pi/pwm_fan/pwm_mosfet_GPIO_17.service
-sudo ln -s /home/pi/pwm_fan/pwm_mosfet_GPIO_17.service /etc/systemd/system/pwm_mosfet_GPIO_17.service
+git clone <THIS REPO>
+cd pwm_mosfet_GPIO_17
+chmod 755 /home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service
+sudo ln -s /home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service /etc/systemd/system/pwm_mosfet_GPIO_17.service
 sudo systemctl daemon-reload
 sudo systemctl start pwm_mosfet_GPIO_17
 sudo systemctl status -a pwm_mosfet_GPIO_17
@@ -40,24 +40,24 @@ Example of status output:
 ```
 $ sudo systemctl status -a pwm_mosfet_GPIO_17
 ● pwm_mosfet_GPIO_17.service - Simple GPIO 17 PWM fan with MOSFET script
-   Loaded: loaded (/home/pi/pwm_fan/pwm_mosfet_GPIO_17.service; enabled; vendor preset: enabled)
+   Loaded: loaded (/home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service; enabled; vendor preset: enabled)
    Active: active (running) since Sun 2020-01-19 19:38:24 CET; 44min ago
  Main PID: 9990 (python)
     Tasks: 2 (limit: 4915)
    Memory: 2.5M
    CGroup: /system.slice/pwm_mosfet_GPIO_17.service
-           └─9990 /usr/bin/python /home/pi/pwm_fan/pwm_mosfet_GPIO_17.py
+           └─9990 /usr/bin/python /home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.py
 
 Jan 19 19:38:24 raspberrypi4.xxx.com systemd[1]: Started Simple GPIO 17 PWM fan with MOSFET script.
 ```
 
 Logs:
 ```
-$ watch -n 5 cat /var/log/pwm_mosfet_GPIO_17.log
-Every 5.0s: cat /var/log/pwm_mosfet_GPIO_17.log             raspberrypi4.xxx.com: Sun Jan 19 19:44:50 2020
+$ watch -n 5 cat /home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.log
+Every 5.0s: cat /home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.log             raspberrypi4.xxx.com: Sun Jan 19 19:44:50 2020
 actualTemp 46.00 TempDiff 1.00 pDiff 15.00 iDiff 10.40 fanSpeed    25
 
-$ watch -n 5 cat /var/log/pwm_mosfet_GPIO_17.speed
-Every 5.0s: cat /var/log/pwm_mosfet_GPIO_17.speed             raspberrypi4.xxx.com: Sun Jan 19 19:52:12 2020
+$ watch -n 5 cat /home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.speed
+Every 5.0s: cat /home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.speed             raspberrypi4.xxx.com: Sun Jan 19 19:52:12 2020
 25
 ```
