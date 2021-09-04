@@ -8,10 +8,10 @@ I have simply removed the battery related code (unused), add a systemd service t
 
 Components:
 - MOSFET IRLZ44n
-- R1 1K ohms
-- R2: 470 ohms
-- Flyback diode 1N4001
+- Flyback diode 1N4001 (I am using 1N4007)
 - 5V 2 pins fan
+
+Note: when using a RPi, the 2 resistors are not needd. The diode can also be skipped, but it is probably safer to keep it.
 
 Wire chart: ![Wiring diagram](electronic_diagram.jpg)
 
