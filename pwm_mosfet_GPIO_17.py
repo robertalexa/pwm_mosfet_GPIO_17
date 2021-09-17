@@ -9,7 +9,7 @@ import RPi.GPIO as GPIO
 
 
 fanPin = 17 # The pin ID, edit here to change it
-desiredTemp = 50 # The maximum temperature in Celsius after which we trigger the fan
+desiredTemp = 45 # The maximum temperature in Celsius after which we trigger the fan
 
 logFile = "./pwm_mosfet_GPIO_17.log" #Path to logfile
 speedFile = "./pwm_mosfet_GPIO_17.speed" #Path to speed file
