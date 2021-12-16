@@ -13,7 +13,8 @@ Components:
 
 Note: when using a RPi, the 2 resistors are not needd. The diode can also be skipped, but it is probably safer to keep it.
 
-Wire chart: 
+Wire chart:
+
 ![Wiring diagram](electronic_diagram.jpg)
 
 ## Software
