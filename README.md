@@ -13,7 +13,8 @@ Components:
 
 Note: when using a RPi, the 2 resistors are not needd. The diode can also be skipped, but it is probably safer to keep it.
 
-Wire chart: ![Wiring diagram](electronic_diagram.jpg)
+Wire chart: 
+![Wiring diagram](electronic_diagram.jpg)
 
 ## Software
 
@@ -25,7 +26,7 @@ I've also added a new simple systemd service.
 
 Setup:
 ```bash
-cd /home/pi
+cd /home/pi/Scripts
 git clone https://github.com/robertalexa/pwm_mosfet_GPIO_17.git
 cd pwm_mosfet_GPIO_17
 chmod 755 /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service
@@ -37,7 +38,7 @@ sudo systemctl enable pwm_mosfet_GPIO_17
 ```
 
 Example of status output:
-```bash
+```console
 $ sudo systemctl status -a pwm_mosfet_GPIO_17
 ● pwm_mosfet_GPIO_17.service - Simple GPIO 17 PWM fan with MOSFET script
    Loaded: loaded (/home/pi/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service; enabled; vendor preset: enabled)
@@ -52,7 +53,7 @@ Jan 19 19:38:24 raspberrypi4.xxx.com systemd[1]: Started Simple GPIO 17 PWM fan 
 ```
 
 Logs:
-```bash
+```console
 $ watch -n 5 cat /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.log
 Every 5.0s: cat /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.log             raspberrypi4.xxx.com: Sun Jan 19 19:44:50 2020
 actualTemp 46.00 TempDiff 1.00 pDiff 15.00 iDiff 10.40 fanSpeed    25
