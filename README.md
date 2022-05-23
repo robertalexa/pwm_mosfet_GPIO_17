@@ -27,11 +27,11 @@ I've also added a new simple systemd service.
 
 Setup:
 ```bash
-cd /home/pi/Scripts
+cd /home/pi/scripts
 git clone https://github.com/robertalexa/pwm_mosfet_GPIO_17.git
 cd pwm_mosfet_GPIO_17
-chmod 755 /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service
-sudo ln -s /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service /etc/systemd/system/pwm_mosfet_GPIO_17.service
+chmod 755 /home/pi/scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service
+sudo ln -s /home/pi/scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.service /etc/systemd/system/pwm_mosfet_GPIO_17.service
 sudo systemctl daemon-reload
 sudo systemctl start pwm_mosfet_GPIO_17
 sudo systemctl status -a pwm_mosfet_GPIO_17
@@ -55,11 +55,11 @@ Jan 19 19:38:24 raspberrypi4.xxx.com systemd[1]: Started Simple GPIO 17 PWM fan 
 
 Logs:
 ```console
-$ watch -n 5 cat /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.log
-Every 5.0s: cat /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.log             raspberrypi4.xxx.com: Sun Jan 19 19:44:50 2020
+$ watch -n 5 cat /home/pi/scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.log
+Every 5.0s: cat /home/pi/scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.log             raspberrypi4.xxx.com: Sun Jan 19 19:44:50 2020
 actualTemp 46.00 TempDiff 1.00 pDiff 15.00 iDiff 10.40 fanSpeed    25
 
-$ watch -n 5 cat /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.speed
-Every 5.0s: cat /home/pi/Scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.speed             raspberrypi4.xxx.com: Sun Jan 19 19:52:12 2020
+$ watch -n 5 cat /home/pi/scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.speed
+Every 5.0s: cat /home/pi/scripts/pwm_mosfet_GPIO_17/pwm_mosfet_GPIO_17.speed             raspberrypi4.xxx.com: Sun Jan 19 19:52:12 2020
 25
 ```
